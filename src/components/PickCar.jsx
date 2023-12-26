@@ -1,8 +1,10 @@
 import React from "react";
+import { Typography } from "antd";
 import { useState } from "react";
 import { CAR_DATA } from "./CarData";
 import CarBox from "./CarBox";
 
+const { Title, Text } = Typography;
 const PickCar = () => {
   const [active, setActive] = useState("SecondCar");
   const [colorBtn, setColorBtn] = useState("btn1");
@@ -16,12 +18,24 @@ const PickCar = () => {
     <div>
       <section id="pick-car-sec">
         <div className="pickcar-sec-titles sec-titles">
-          <h3 className="section-sub-titles">Vehicle Models</h3>
-          <h1 className="section-title">Our Rental Fleet</h1>
-          <p className="para">
+          <Title>Vehicle Models</Title>
+          <Title
+            style={{
+              fontSize: "60px",
+              margin: "0px",
+            }}
+          >
+            Our Rental Fleet
+          </Title>
+          <Text
+            style={{
+              fontSize: "26px",
+            }}
+            type="secondary"
+          >
             Choose from a variety of our amazing vehicles to rent for your{" "}
             <br /> next adventure or business trip
-          </p>
+          </Text>
         </div>
         <div className="container">
           <div className="pick-container">
@@ -35,7 +49,13 @@ const PickCar = () => {
                     btnID("btn1");
                   }}
                 >
-                  Audi A1 S-Line
+                  <Text
+                    style={{
+                      fontSize: "24px",
+                    }}
+                  >
+                    Audi A1 S-Line
+                  </Text>
                 </button>
                 <button
                   className={`${coloringButton("btn2")}`}
@@ -45,7 +65,15 @@ const PickCar = () => {
                     btnID("btn2");
                   }}
                 >
-                  VW Golf 6
+                  {" "}
+                  <Text
+                    style={{
+                      fontSize: "24px",
+                    }}
+                  >
+                    {" "}
+                    VW Golf 6
+                  </Text>
                 </button>
                 <button
                   className={`${coloringButton("btn3")}`}
@@ -55,7 +83,14 @@ const PickCar = () => {
                     btnID("btn3");
                   }}
                 >
-                  Toyota Camry
+                  <Text
+                    style={{
+                      fontSize: "24px",
+                    }}
+                  >
+                    {" "}
+                   Toyota Camry
+                  </Text>
                 </button>
                 <button
                   className={`${coloringButton("btn4")}`}
@@ -65,7 +100,14 @@ const PickCar = () => {
                     btnID("btn4");
                   }}
                 >
-                  BMW 320 ModernLine
+                  <Text
+                    style={{
+                      fontSize: "24px",
+                    }}
+                  >
+                    {" "}
+                    BMW 320 Modernline
+                  </Text>
                 </button>
                 <button
                   className={`${coloringButton("btn5")}`}
@@ -75,7 +117,14 @@ const PickCar = () => {
                     btnID("btn5");
                   }}
                 >
-                  Mercedes-Benz GLK
+                  <Text
+                    style={{
+                      fontSize: "24px",
+                    }}
+                  >
+                    {" "}
+                    Mercedes-Benz GLK
+                  </Text>
                 </button>
                 <button
                   className={`${coloringButton("btn6")}`}
@@ -85,7 +134,14 @@ const PickCar = () => {
                     btnID("btn6");
                   }}
                 >
-                  VW Passat CC
+                 <Text
+                    style={{
+                      fontSize: "24px",
+                    }}
+                  >
+                    {" "}
+                    VW Passat CC
+                  </Text>
                 </button>
               </div>
 

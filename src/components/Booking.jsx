@@ -160,9 +160,12 @@ const Booking = () => {
                 Fill All Fields!
               </Text>
               {/* <p className="error-message">Fill All Fields!</p> */}
-              <p className="booking-done">
+              {/* <p className="booking-done">
                 Check your email to confirm the order.
-              </p>
+              </p> */}
+              <Text className="booking-done" type="success">
+                Check your email to confirm the order.
+              </Text>
               <form className="box-form">
                 <div className="book-first-row">
                   <label>
@@ -318,7 +321,7 @@ const Booking = () => {
               {/* <h5 className="modal-info-title">Location & Date</h5> */}
               <span>
                 <div>
-                  <Title level={3} lassName="modal-from-labels">
+                  <Title level={3} className="modal-from-labels">
                     Pick-Up Date & Time
                   </Title>
                   {/* <h6 className="modal-from-labels">Pick-Up Date & Time</h6> */}
