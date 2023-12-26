@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Typography, Checkbox, Button } from "antd";
 import CarAudi from "../images/audia1.jpg";
 import CarGolf from "../images/golf6.jpg";
 import CarToyota from "../images/toyotacamry.jpg";
@@ -7,6 +8,7 @@ import CarBmw from "../images/bmw320.jpg";
 import CarMercedes from "../images/benz.jpg";
 import CarPassat from "../images/passatcc.jpg";
 
+const { Title, Text } = Typography;
 const Booking = () => {
   // Modal and Modal Inputs
   const [modal, setModal] = useState(false);
@@ -145,16 +147,29 @@ const Booking = () => {
         <div className="container">
           <div className="booking-container">
             <div className="booking-box">
-              <h2 className="booking-box-title">Book a car</h2>
-              <p className="error-message">Fill All Fields!</p>
+              <Title
+                style={{
+                  fontWeight: "700",
+                }}
+                level={1}
+              >
+                Book a car
+              </Title>
+              {/* <h2 className="booking-box-title">Book a car</h2> */}
+              <Text className="error-message" type="danger">
+                Fill All Fields!
+              </Text>
+              {/* <p className="error-message">Fill All Fields!</p> */}
               <p className="booking-done">
                 Check your email to confirm the order.
               </p>
               <form className="box-form">
                 <div className="book-first-row">
                   <label>
-                    Select Your Car Type
-                    <b>*</b>
+                    <Title level={3}>
+                      Select Your Car Type
+                      <b>*</b>
+                    </Title>
                   </label>
                   <select value={carType} onChange={handleCar}>
                     <option>Select your car type</option>
@@ -171,8 +186,10 @@ const Booking = () => {
 
                 <div className="book-first-row">
                   <label>
-                    Pick-up
-                    <b>*</b>
+                    <Title level={3}>
+                      Pick Up Location
+                      <b>*</b>
+                    </Title>
                   </label>
                   <select value={pickUp} onChange={handlePick}>
                     <option>Select pick up location</option>
@@ -186,8 +203,10 @@ const Booking = () => {
 
                 <div className="book-first-row">
                   <label>
-                    Drop-of
-                    <b>*</b>
+                    <Title level={3}>
+                      Drop Off Location
+                      <b>*</b>
+                    </Title>
                   </label>
                   <select value={dropOff} onChange={handleDrop}>
                     <option>Select drop off location</option>
@@ -201,8 +220,10 @@ const Booking = () => {
 
                 <div className="book-second-row">
                   <label htmlFor="picktime">
-                    Pick-up
-                    <b>*</b>
+                    <Title level={3}>
+                      Pick Up Date
+                      <b>*</b>
+                    </Title>
                   </label>
                   <input
                     id="picktime"
@@ -214,8 +235,10 @@ const Booking = () => {
 
                 <div className="book-second-row">
                   <label htmlFor="droptime">
-                    Drop-of
-                    <b>*</b>
+                    <Title level={3}>
+                      Drop Off Time
+                      <b>*</b>
+                    </Title>
                   </label>
                   <input
                     id="droptime"
@@ -242,27 +265,63 @@ const Booking = () => {
       <div className={`booking-modal ${modal ? "active-modal" : ""}`}>
         {/* title */}
         <div className="modal-title ">
-          <h2>Complete Reservation</h2>
-          <button onClick={openModal}>X</button>
+          <Title style={{ color: "white" }}>Complete Reservation</Title>
+          {/* <h2>Complete Reservation</h2> */}
+          <Button
+            onClick={openModal}
+            style={{
+              color: "white",
+              fontWeight: "600",
+              fontSize: "18px",
+              height: "40px",
+            }}
+            type="text"
+          >
+            X
+          </Button>
         </div>
         {/* message */}
         <div className="modal-message">
-          <h4 className="modal-warning">
+          <Title level={3} className="modal-warning">
+            {" "}
             Upon completing this reservation enquiry, you will receive:
-          </h4>
-          <p className="para">
+          </Title>
+          {/* <h4 className="modal-warning">
+            Upon completing this reservation enquiry, you will receive:
+          </h4> */}
+          <Text
+            style={{
+              fontSize: "26px",
+            }}
+            type="secondary"
+          >
             Your rental voucher to produce on arrival at the rental desk and a
             toll-free customer support number.
-          </p>
+          </Text>
+          {/* <p className="para">
+            Your rental voucher to produce on arrival at the rental desk and a
+            toll-free customer support number.
+          </p> */}
         </div>
         {/* car info */}
         <div className="modal-car-info">
           <div className="dates-div">
             <div className="modal-dates-info">
-              <h5 className="modal-info-title">Location & Date</h5>
+              <Title
+                style={{
+                  fontWeight: "700",
+                }}
+                level={1}
+              >
+                Location & Date
+              </Title>
+              {/* <h5 className="modal-info-title">Location & Date</h5> */}
               <span>
                 <div>
-                  <h6 className="modal-from-labels">Pick-Up Date & Time</h6>
+                  <Title level={3} lassName="modal-from-labels">
+                    Pick-Up Date & Time
+                  </Title>
+                  {/* <h6 className="modal-from-labels">Pick-Up Date & Time</h6> */}
                   <p>
                     {pickTime} /{" "}
                     <input type="time" className="input-time"></input>
@@ -274,7 +333,11 @@ const Booking = () => {
             <div className="modal-dates-info">
               <span>
                 <div>
-                  <h6 className="modal-from-labels">Drop-Off Date & Time</h6>
+                  <Title level={3} lassName="modal-from-labels">
+                    Drop-Off Date & Time
+                  </Title>
+
+                  {/* <h6 className="modal-from-labels">Drop-Off Date & Time</h6> */}
                   <p>
                     {dropTime} /{" "}
                     <input type="time" className="input-time"></input>
@@ -286,7 +349,11 @@ const Booking = () => {
             <div className="modal-dates-info">
               <span>
                 <div>
-                  <h6 className="modal-from-labels">Pick-Up Location</h6>
+                  <Title level={3} lassName="modal-from-labels">
+                    Pick-Up Location
+                  </Title>
+
+                  {/* <h6 className="modal-from-labels">Pick-Up Location</h6> */}
                   <p>{pickUp}</p>
                 </div>
               </span>
@@ -295,29 +362,40 @@ const Booking = () => {
             <div className="modal-dates-info">
               <span>
                 <div>
-                  <h6 className="modal-from-labels">Drop-Off Location</h6>
+                  <Title level={3} lassName="modal-from-labels">
+                    Drop-Off Location
+                  </Title>
+
+                  {/* <h6 className="modal-from-labels">Drop-Off Location</h6> */}
                   <p>{dropOff}</p>
                 </div>
               </span>
             </div>
           </div>
           <div className="modal-car-model">
-            <h5 className="modal-info-title">
-              <span>Car -</span> {carType}
-            </h5>
+            <Title
+              style={{ fontWeight: "700" }}
+              className="modal-info-title"
+              level={1}
+            >
+              <span style={{ color: "#cb3737" }}>Car -</span> {carType}
+            </Title>
+            {/* <h5 className="modal-info-title"> */}
+            {/* <span>Car -</span> {carType} */}
+            {/* </h5> */}
             {imgUrl && <img src={imgUrl} alt="car_img" />}
           </div>
         </div>
         {/* personal info */}
         <div className="modal-person-info">
-          <h4 className="modal-info-title personal-info">
-            Personal Information
-          </h4>
+          <Title className="modal-info-title personal-info" level={1}>
+            PERSONAL INFORMATION
+          </Title>
           <form className="info-form">
             <div className="email-address-col">
               <span>
                 <label>
-                  First Name <b>*</b>
+                  <Title level={3}>First Name</Title>
                 </label>
                 <input
                   className="email-address-inputs"
@@ -331,7 +409,7 @@ const Booking = () => {
 
               <span>
                 <label>
-                  Last Name <b>*</b>
+                  <Title level={3}>Last Name</Title>
                 </label>
                 <input
                   className="email-address-inputs"
@@ -345,7 +423,7 @@ const Booking = () => {
 
               <span>
                 <label>
-                  Phone Number <b>*</b>
+                  <Title level={3}>Phone Number</Title>
                 </label>
                 <input
                   className="email-address-inputs"
@@ -359,7 +437,7 @@ const Booking = () => {
 
               <span>
                 <label>
-                  Age <b>*</b>
+                  <Title level={3}>Age </Title>
                 </label>
                 <input
                   className="email-address-inputs"
@@ -375,7 +453,7 @@ const Booking = () => {
             <div className="city-zip-col">
               <span>
                 <label>
-                  Email <b>*</b>
+                  <Title level={3}>Email </Title>
                 </label>
                 <input
                   className="email-address-inputs"
@@ -389,7 +467,7 @@ const Booking = () => {
 
               <span>
                 <label>
-                  Address <b>*</b>
+                  <Title level={3}>Address </Title>
                 </label>
                 <input
                   className="email-address-inputs"
@@ -405,7 +483,7 @@ const Booking = () => {
             <div className="city-zip-col">
               <span>
                 <label>
-                  City <b>*</b>
+                  <Title level={3}>City </Title>
                 </label>
                 <input
                   className="email-address-inputs"
@@ -419,7 +497,7 @@ const Booking = () => {
 
               <span>
                 <label>
-                  Zip Code <b>*</b>
+                  <Title level={3}>Zip Code </Title>
                 </label>
                 <input
                   className="email-address-inputs"
@@ -433,8 +511,22 @@ const Booking = () => {
             </div>
 
             <span className="info-form__checkbox">
-              <input type="checkbox"></input>
-              <p>Please send me latest news and updates</p>
+              <Checkbox
+                style={{
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                }}
+              >
+                <Text
+                  style={{
+                    fontSize: "26px",
+                  }}
+                  type="primary"
+                >
+                  Please send me latest news and updates
+                </Text>
+              </Checkbox>
+              {/* <input style={{ fontSize: "26px" }} type="checkbox"></input> */}
             </span>
 
             <div className="modal-foot">

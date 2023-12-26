@@ -49,7 +49,7 @@
 label {
   font-size: 26px;
   font-weight: 600;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 select {
   font-size: 20px;
@@ -244,7 +244,7 @@ select:hover {
   border: none;
 }
 .error-modal {
-  font-size: 10px;
+  font-size: 14px;
 }
 /* .city-zip-col> input,
   .email-address-col > input {
@@ -292,4 +292,15 @@ select:hover {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+}
+.input-time {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.input-time:focus {
+  border-color: #000; /* Change the border color when the input is focused */
 }
