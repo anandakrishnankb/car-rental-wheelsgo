@@ -1,0 +1,41 @@
+#pick-car-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px 100px 0px;
+    background-color: #f8f8f8;
+  }
+  .pickcar-sec-titles{
+    margin-bottom: 100px;
+  }
+
+
+  .pick-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .pick-container__car-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+  }
+  .pick-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .pick-box button {
+    font-size: 22px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    padding: 25px 30px;
+    background-color: #e9e9e9;
+    transition: all 0.2s;
+    text-align: left;
+  }
+  .pick-box button:hover {
+    background-color: #cb3737;
+    color: white;
+  }
+  

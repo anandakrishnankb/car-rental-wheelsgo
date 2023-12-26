@@ -1,0 +1,63 @@
+
+.logo-container > img{
+    width:100px;
+    height: 100px;
+  }
+.nav-container {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+  }
+  .nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1330px;
+    height: 110px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 0 0 5px 5px;
+  }
+  .nav-links a {
+    font-size: 22px;
+    margin-right: 18px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.25s ease-in-out;
+  }
+  .nav-links {
+    color: #010103;
+  }
+  .nav-links a:hover {
+    color: #cb3737;
+  }
+  .nav-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  .red-btn {
+    font-size: 20px;
+    color: #fff;
+    background-color: #cb3737;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    /* box-shadow: 20px 20px 60px #0000003a, inset -20px -20px 60px #ff4c3056; */
+    cursor: pointer;
+  }
+  .red-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  .signin-btn {
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.25s ease-in-out;
+  }
+  .signin-btn:hover {
+    color: #cb3737;
+  }

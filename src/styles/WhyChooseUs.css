@@ -1,0 +1,21 @@
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container>img{
+   height: auto; 
+   width: 80%;
+}
+.chooseus-text-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background-image: url(../images/chooseus-trails.png);
+}
+.chooseus-right-text-container{
+    display: flex;
+    flex-direction: column;
+    
+}
