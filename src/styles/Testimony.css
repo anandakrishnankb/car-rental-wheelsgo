@@ -1,0 +1,6 @@
+#testimony-section {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 40px 100px 40px;
+  background-color: #f8f8f8; 
+}

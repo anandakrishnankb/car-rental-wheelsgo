@@ -1,0 +1,20 @@
+.footer-col-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 60px;
+}
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 350px;
+}
+.footer-col > a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+#credit{
+    font-size: 20px;
+    font-weight: lighter;
+}

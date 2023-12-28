@@ -27,6 +27,7 @@
     transition: color 0.25s ease-in-out;
   }
   .nav-links {
+    display: flex;
     color: #010103;
   }
   .nav-links a:hover {

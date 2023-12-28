@@ -336,7 +336,7 @@ const Booking = () => {
             <div className="modal-dates-info">
               <span>
                 <div>
-                  <Title level={3} lassName="modal-from-labels">
+                  <Title level={3} className="modal-from-labels">
                     Drop-Off Date & Time
                   </Title>
 
@@ -352,7 +352,7 @@ const Booking = () => {
             <div className="modal-dates-info">
               <span>
                 <div>
-                  <Title level={3} lassName="modal-from-labels">
+                  <Title level={3} className="modal-from-labels">
                     Pick-Up Location
                   </Title>
 
@@ -365,7 +365,7 @@ const Booking = () => {
             <div className="modal-dates-info">
               <span>
                 <div>
-                  <Title level={3} lassName="modal-from-labels">
+                  <Title level={3} className="modal-from-labels">
                     Drop-Off Location
                   </Title>
 

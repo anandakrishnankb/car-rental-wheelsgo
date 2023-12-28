@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-scroll";
 import Logo from "../images/app-logo.png";
+import { Typography } from "antd";
 
+const { Title, Text } = Typography;
 const Navbar = () => {
   return (
     <section id="nav-sec">
@@ -12,22 +14,33 @@ const Navbar = () => {
           </div>
           <div className="nav-links">
             <Link to="home" smooth={true} duration={500}>
-              Home
+              <Title level={4}>Home</Title>
+
             </Link>
             <Link to="about" smooth={true} duration={500}>
-              About
+            <Title level={4}>About</Title>
+
+              {/* About */}
             </Link>
             <Link to="vehicle-models" smooth={true} duration={500}>
-              Vehicle Models
+            <Title level={4}>Vehicle Models</Title>
+
+              {/* Vehicle Models */}
             </Link>
             <Link to="testimonial" smooth={true} duration={500}>
-              Testimonial
+            <Title level={4}>Testimonial</Title>
+
+              {/* Testimonial */}
             </Link>
             <Link to="our-team" smooth={true} duration={500}>
-              Our Team
+            <Title level={4}>Our Team</Title>
+
+              {/* Our Team */}
             </Link>
             <Link to="contact" smooth={true} duration={500}>
-              Contact
+            <Title level={4}>Contact</Title>
+
+              {/* Contact */}
             </Link>
           </div>
 
