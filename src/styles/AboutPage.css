@@ -1,0 +1,39 @@
+.section-pages {
+  position: relative;
+  background-color: #f8f8f8;
+}
+
+.section-pages::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../images/sectionbg.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.3; /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
+.section-page-text {
+  padding: 250px 150px;
+}
+
+.about-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  padding: 100px;
+}
+.about-img-container > img {
+  width: 450px;
+  height: 450px;
+}
+.about-text-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 650px;
+  margin-left: 100px;
+}

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Typography, Button, Form, Input, InputNumber } from "antd";
+import { Typography, Button, Form, Input, InputNumber, message, notification } from "antd";
 import { MailOutlined, PhoneOutlined } from "@ant-design/icons";
 
 const { Title, Text } = Typography;
@@ -18,6 +18,7 @@ const Footer = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     form.current.reset();
+    message.success("Subscriberd to wheels!");
     emailjs
       .sendForm(
         "service_2hppe2q",
@@ -43,7 +44,7 @@ const Footer = () => {
           </Title>
           <Text
             style={{
-              fontSize: "26px",
+              fontSize: "22px",
             }}
             type="secondary"
           >
@@ -81,7 +82,7 @@ const Footer = () => {
           </Title>
           <Text
             style={{
-              fontSize: "26px",
+              fontSize: "22px",
             }}
             type="secondary"
           >
@@ -89,7 +90,7 @@ const Footer = () => {
           </Text>
           <Text
             style={{
-              fontSize: "26px",
+              fontSize: "22px",
             }}
             type="secondary"
           >
@@ -97,7 +98,7 @@ const Footer = () => {
           </Text>
           <Text
             style={{
-              fontSize: "26px",
+              fontSize: "22px",
             }}
             type="secondary"
           >
@@ -105,7 +106,7 @@ const Footer = () => {
           </Text>
           <Text
             style={{
-              fontSize: "26px",
+              fontSize: "22px",
             }}
             type="secondary"
           >
@@ -118,7 +119,7 @@ const Footer = () => {
           </Title>
           <Text
             style={{
-              fontSize: "26px",
+              fontSize: "22px",
             }}
             type="secondary"
           >
@@ -126,7 +127,7 @@ const Footer = () => {
           </Text>
           <Text
             style={{
-              fontSize: "26px",
+              fontSize: "22px",
             }}
             type="secondary"
           >
@@ -134,7 +135,7 @@ const Footer = () => {
           </Text>
           <Text
             style={{
-              fontSize: "26px",
+              fontSize: "22px",
             }}
             type="secondary"
           >
@@ -147,17 +148,13 @@ const Footer = () => {
           </Title>
           <Text
             style={{
-              fontSize: "26px",
+              fontSize: "22px",
             }}
             type="secondary"
           >
             Subscribe your Email address for latest news & updates.
           </Text>{" "}
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            action=""
-          >
+          <form ref={form} onSubmit={sendEmail} action="">
             <input
               style={{
                 height: "40px",
@@ -176,7 +173,6 @@ const Footer = () => {
               fdprocessedid="o0hwvm"
             />
             <Button
-            
               style={{
                 marginTop: "10px",
                 fontSize: "16px",

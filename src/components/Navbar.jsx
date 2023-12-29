@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import Logo from "../images/app-logo.png";
-import { Typography } from "antd";
+import { Typography, Button } from "antd";
 
 const { Title, Text } = Typography;
 const Navbar = () => {
@@ -14,31 +14,69 @@ const Navbar = () => {
           </div>
           <div className="nav-links">
             <Link to="home" smooth={true} duration={500}>
-              <Title level={4}>Home</Title>
-
+              <Button
+                style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
+                type="text"
+              >
+                {" "}
+                Home
+              </Button>
             </Link>
             <Link to="about" smooth={true} duration={500}>
-            <Title level={4}>About</Title>
+              <Button
+                style={{
+                  fontSize: "20px",
+                  fontWeight: "600",
+                  height: "50px",
+                }}
+                type="text"
+              >
+                About
+              </Button>
 
               {/* About */}
             </Link>
             <Link to="vehicle-models" smooth={true} duration={500}>
-            <Title level={4}>Vehicle Models</Title>
+              <Button
+                style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
+                type="text"
+              >
+                {" "}
+                Vehicle Models
+              </Button>
 
               {/* Vehicle Models */}
             </Link>
             <Link to="testimonial" smooth={true} duration={500}>
-            <Title level={4}>Testimonial</Title>
+              <Button
+                style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
+                type="text"
+              >
+                {" "}
+                Testimonial
+              </Button>
 
               {/* Testimonial */}
             </Link>
             <Link to="our-team" smooth={true} duration={500}>
-            <Title level={4}>Our Team</Title>
+              <Button
+                style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
+                type="text"
+              >
+                {" "}
+                Our Team
+              </Button>
 
               {/* Our Team */}
             </Link>
             <Link to="contact" smooth={true} duration={500}>
-            <Title level={4}>Contact</Title>
+              <Button
+                style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
+                type="text"
+              >
+                {" "}
+                Contact
+              </Button>
 
               {/* Contact */}
             </Link>
