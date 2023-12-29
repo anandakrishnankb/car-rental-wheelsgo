@@ -9,6 +9,7 @@
   .hero-main {
     display: flex;
     justify-content: space-between;
+    margin-top: 100px;
   }
   .hero-contents {
     display: flex;

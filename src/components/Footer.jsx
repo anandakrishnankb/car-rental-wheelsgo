@@ -18,7 +18,7 @@ const Footer = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     form.current.reset();
-    message.success("Subscriberd to wheels!");
+    message.success("Subscriberd to WheelsGo!");
     emailjs
       .sendForm(
         "service_2hppe2q",

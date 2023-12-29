@@ -35,6 +35,7 @@ const Testimony = () => {
         style={{ display: "flex", justifyContent: "space-between" }}
         className="card-wrap"
       >
+        
         <Card
           hoverable
           style={{
@@ -43,7 +44,7 @@ const Testimony = () => {
             padding: "30px",
           }}
         >
-          <Meta
+          <Meta 
             avatar={
               <Avatar
                 style={{

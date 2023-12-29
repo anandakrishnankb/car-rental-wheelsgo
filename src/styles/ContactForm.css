@@ -1,0 +1,17 @@
+.contact-form-wrap{
+    padding: 150px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact-text{
+display: flex;
+flex-direction: column;
+margin-right: 50px;
+}
+.contact-form{
+    margin-left: 50px;
+    width: 500px;
+    margin-left: 100px;
+}

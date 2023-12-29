@@ -9,7 +9,10 @@ import Banner from "./components/Banner";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Testimony from "./components/Testimony";
 import AboutPage from "./pages/About";
-import HomePage from "./pages/Home.jsx";
+import HomePage from "./pages/Home.jsx"
+import ModelsPage from "./pages/Vehicles.jsx";
+import TestimonialsPage from "./pages/Testimonials.jsx";
+import ContactPage from "./pages/Contact.jsx";
 import "./App.css";
 import "./styles/Navbar.css";
 import "./styles/Hero.css";
@@ -22,6 +25,7 @@ import "./styles/WhyChooseUs.css";
 import "./styles/Testimony.css";
 import "./styles/Footer.css";
 import "./styles/AboutPage.css";
+import "./styles/ContactForm.css";
 import Footer from "./components/Footer";
 
 function App() {
@@ -30,6 +34,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
+        <Route path="models" element={<ModelsPage />} />
+        <Route path="testimonial" element={<TestimonialsPage />} /><Route path="models" element={<ModelsPage />} />
+        <Route path="contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );

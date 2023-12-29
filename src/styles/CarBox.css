@@ -82,3 +82,11 @@
   display: flex;
   justify-content: space-between;
 }
+
+
+@media screen and (max-width: 1440px) {
+  .pick-car {
+    width: 100%;
+
+  }
+}

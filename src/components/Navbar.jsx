@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import Logo from "../images/app-logo.png";
 import { Typography, Button } from "antd";
 
@@ -13,16 +13,15 @@ const Navbar = () => {
             <img src={Logo} alt="" />
           </div>
           <div className="nav-links">
-            <Link to="home" smooth={true} duration={500}>
+            <Link to="/" smooth={true} duration={500}>
               <Button
                 style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
                 type="text"
               >
-                {" "}
                 Home
               </Button>
             </Link>
-            <Link to="about" smooth={true} duration={500}>
+            <Link to="/about" smooth={true} duration={500}>
               <Button
                 style={{
                   fontSize: "20px",
@@ -36,18 +35,17 @@ const Navbar = () => {
 
               {/* About */}
             </Link>
-            <Link to="vehicle-models" smooth={true} duration={500}>
+            <Link to="/models" smooth={true} duration={500}>
               <Button
                 style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
                 type="text"
               >
-                {" "}
                 Vehicle Models
               </Button>
 
               {/* Vehicle Models */}
             </Link>
-            <Link to="testimonial" smooth={true} duration={500}>
+            <Link to="/testimonial" smooth={true} duration={500}>
               <Button
                 style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
                 type="text"
@@ -58,18 +56,9 @@ const Navbar = () => {
 
               {/* Testimonial */}
             </Link>
-            <Link to="our-team" smooth={true} duration={500}>
-              <Button
-                style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
-                type="text"
-              >
-                {" "}
-                Our Team
-              </Button>
 
-              {/* Our Team */}
-            </Link>
-            <Link to="contact" smooth={true} duration={500}>
+            {/* Our Team */}
+            <Link to="/contact" smooth={true} duration={500}>
               <Button
                 style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
                 type="text"
