@@ -10,9 +10,9 @@ const Hero = () => {
     <section id="hero-sec">
       <div className="hero-main">
         <div className="hero-contents">
-          <Title level={2}>Plan your trip now</Title>
+          <Title className="test" level={2}>Plan your trip now</Title>
           {/* <h3 className="title-top">Plan your trip now</h3> */}
-          <Title
+          <Title className="main-title"
             style={{ fontWeight: "700", fontSize: "60px", marginTop: "0px" }}
             level={1}
           >

@@ -84,9 +84,41 @@
 }
 
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1660px) {
   .pick-car {
-    width: 100%;
-
+    width: 560px;
+    height: 580px;
   }
+  .pick-car>img {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 1380px) {
+  .box-cars {
+    /* gap: 3rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 992px) {
+  .pick-car {
+    width: 360px;
+    height: 480px;
+  }
+  .pick-car>img {
+    width: 100%;
+  }
+  .pick-description{
+    width: 300px;
+  }
+  
+.pick-description__table__col {
+ 
+  padding: 10px;
+ 
+}
 }

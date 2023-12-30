@@ -40,3 +40,24 @@
 }
 
 
+@media screen and (max-width: 1380px) {
+  .pick-container__car-content {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between;
+    gap: 80px; */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #pick-car-sec{
+    padding: 30px;
+  }
+  .pick-container__car-content{
+    align-items: center;
+    justify-content: center;
+  }
+  .pick-box{
+    width: 300px;
+  }
+}

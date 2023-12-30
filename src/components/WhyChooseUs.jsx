@@ -16,8 +16,8 @@ const WhyChooseUs = () => {
       <div className="chooseus-text-container">
         <div className="chooseus-left-text-container">
           <div className="left-titles">
-            <Title>Why Choose Us?</Title>
-            <Title
+            <Title className="title-head">Why Choose Us?</Title>
+            <Title className="title"
               style={{
                 fontSize: "60px",
                 marginTop: "0px",

@@ -9,8 +9,8 @@ const Process = () => {
   return (
     <section id="process-sec">
       <div className="process-sec-titles sec-titles">
-        <Title>Plan your Trip Now</Title>
-        <Title
+        <Title className="title-head">Plan your Trip Now</Title>
+        <Title className="title"
           style={{
             fontSize: "60px",
             margin: "0px",

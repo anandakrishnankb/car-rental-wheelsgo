@@ -37,3 +37,36 @@
   width: 650px;
   margin-left: 100px;
 }
+@media screen and (max-width: 992px) {
+ 
+  .about-main-container{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-img-container>img{
+    width: 320px;
+    height: 320px;
+  }
+  .about-text-container{
+    margin: 0;
+    width: 100%;
+  }
+  .about-icons{
+    display: flex;
+    flex-direction: column;
+  }
+.icon-text-wrap{
+  display: flex;
+  margin: 0;
+}
+.info-wrap{
+  display: flex;
+}
+.ant-icon{
+  margin-right: 20px !important;
+}
+.section-page-text{
+  padding: 30px;
+}
+}

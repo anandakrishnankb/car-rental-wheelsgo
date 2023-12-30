@@ -304,3 +304,106 @@ select:hover {
 .input-time:focus {
   border-color: #000; /* Change the border color when the input is focused */
 }
+
+/* @media screen and (max-width: 1024px) {
+  .booking-box {
+    display: flex;
+    flex-direction: column;
+  }
+} */
+
+/* Add this CSS in your component or external stylesheet */
+
+/* For screens less than 1440px */
+@media (max-width: 1440px) {
+  .booking-container {
+    width: 100%;
+  }
+
+  .booking-box {
+    width: 100%;
+  }
+
+  .book-first-row,
+  .book-second-row {
+    flex-direction: column;
+  }
+
+  .error-message,
+  .booking-done {
+    font-size: 16px;
+  }
+
+  .box-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modal-overlay {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+ 
+
+  /* Updated styles for column layout */
+  .email-address-col,
+  .city-zip-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .email-address-inputs {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .info-form__checkbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Add more responsive styles as needed */
+}
+
+@media (max-width: 992px) {
+  #booking-sec{
+    padding: 30px;
+  }
+  .booking-box{
+    padding: 15px;
+  }
+ .search-btn{
+  font-size: 20px;
+  padding: 15px 5px;
+ }
+
+.modal-message{
+  padding: 20px;
+}
+.modal-car-info{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+ .booking-modal {
+  opacity: 0;
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 9999;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 100vh;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255);
+  padding-right: 2px;
+  color: black;
+}
+}

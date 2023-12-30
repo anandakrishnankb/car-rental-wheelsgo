@@ -6,11 +6,11 @@ const Banner = () => {
   return (
     <section id="banner-sec">
       <div className="banner-container">
-        <Title style={{ margin: "0px", fontSize: "80px" }}>
+        <Title className="title" style={{ margin: "0px", fontSize: "80px" }}>
           Save big with our cheap car rental!
         </Title>
         {/* <h1>Save big with our cheap car rental!</h1> */}
-        <Title
+        <Title className="title-head"
           style={{
             fontSize: "32px",
             color:"white"

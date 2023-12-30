@@ -12,8 +12,8 @@ const Testimony = () => {
   return (
     <section id="testimony-section">
       <div className="process-sec-titles sec-titles">
-        <Title style={{ marginTop: "150px" }}>Reviewed By People</Title>
-        <Title
+        <Title className="title-head" level={1} style={{ marginTop: "150px" }}>Reviewed By People</Title>
+        <Title className="title"
           style={{
             fontSize: "60px",
             margin: "0px",
@@ -27,7 +27,7 @@ const Testimony = () => {
           }}
           type="secondary"
         >
-          Our clients have experienced our service and results, and they're
+          Our clients have experienced our service, and they're
           eager to <br /> share their positive experiences with you.
         </Text>
       </div>

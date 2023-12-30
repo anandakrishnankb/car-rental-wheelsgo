@@ -37,14 +37,15 @@ const About = () => {
   return (
     <section id="about-page">
       <Navbar />
-      <SectionHero name="About" />
+      <SectionHero name="About Us" />
       <div className="about-main-container">
         <div className="about-img-container">
           <img src={AbtImg} alt="" />
         </div>
         <div className="about-text-container">
-          <Title level={1}>About Company</Title>
+          <Title className="title-head" level={1}>About Company</Title>
           <Title
+          className="title"
             level={1}
             style={{
               lineHeight: "1",

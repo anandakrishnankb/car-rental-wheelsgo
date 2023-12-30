@@ -1,20 +1,49 @@
-.footer-col-wrap{
-    display: flex;
-    justify-content: space-between;
-    padding: 80px 60px;
+.footer-col-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 60px;
 }
-.footer-col{
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 350px;
+}
+.footer-col > a {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+}
+#credit {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 1380px) {
+  .footer-col-wrap {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    max-width: 350px;
+    gap: 60px;
+
+    /* padding: 80px 60px; */
+  }
 }
-.footer-col > a{
-    text-decoration: none;
-    color: black;
-    font-size: 22px;
+@media screen and (max-width: 992px) {
+  .footer-col-wrap {
+    padding: 30px;
+  }
+  .footer-col a {
+    font-size: 18px;
+}
+.footer-col{
+    gap: 20px;
 }
 #credit{
-    font-size: 20px;
-    font-weight: lighter;
+    font-size: 18px;
+}
+.footer-col .anticon {
+    width: 18px;
+    vertical-align: middle; /* Aligns the icon vertically in the middle of the line */
+    margin-right: 10px; /* Adjust as needed for spacing between the icon and text */
+}
 }

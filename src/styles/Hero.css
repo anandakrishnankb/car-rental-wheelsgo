@@ -1,50 +1,85 @@
-
 #hero-sec {
-    background-color: #f8f8f8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: fit-content;
-  }
-  .hero-main {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 100px;
-  }
-  .hero-contents {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 180px 140px;
-  }
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+}
+.hero-main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.hero-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 180px 140px;
+}
+.hero-img {
+  padding: 60px;
+  width: 732px;
+}
+.hero-img > img {
+  width: 100%;
+}
+.hero-btn-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+.black-btn {
+  font-size: 20px;
+  color: #fff;
+  background-color: #010103;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease,
+    color 0.3s ease;
+  /* box-shadow: 20px 20px 60px #0000003a, inset -20px -20px 60px #ff4c3056; */
+  cursor: pointer;
+}
+.black-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: #f8f8f8;
+  color: #010103;
+}
+
+@media screen and (max-width: 992px) {
   .hero-img {
-    padding: 60px;
-    width: 732px;
-    
+    display: none;
   }
-  .hero-img > img {
-    width: 100%;
+  h2.ant-typography {
+    font-size: 25px;
   }
+  h1.ant-typography {
+    font-size: 10px;
+  }
+
+  .hero-main {
+    flex-direction: column;
+  }
+
+  .hero-contents {
+    padding: 30px;
+  }
+
+  .main-title {
+    font-size: 42px !important;
+  }
+ 
+
   .hero-btn-container {
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
+    flex-direction: column;
+    margin-top: 20px;
   }
+
+  .red-btn,
   .black-btn {
-    font-size: 20px;
-    color: #fff;
-    background-color: #010103;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 3px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease,
-      color 0.3s ease;
-    /* box-shadow: 20px 20px 60px #0000003a, inset -20px -20px 60px #ff4c3056; */
-    cursor: pointer;
+    font-size: 22px;
+    width: 100%;
+    margin-bottom: 10px;
   }
-  .black-btn:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    background-color: #f8f8f8;
-    color: #010103;
-  }
+}

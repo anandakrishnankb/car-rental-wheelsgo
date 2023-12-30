@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Form, Input, InputNumber, Button } from "antd";
+import { Typography, Form, Input, InputNumber, Button, message } from "antd";
 import { Link } from "react-router-dom";
 import {
   PhoneOutlined,
@@ -21,13 +21,17 @@ const validateMessages = {
 /* eslint-enable no-template-curly-in-string */
 
 const onFinish = (values) => {
+  message.success("Form Submitted!")
   console.log(values);
 };
 const ContactForm = () => {
   return (
     <div className="contact-form-wrap">
       <div className="contact-text">
-        <Title style={{ fontSize: "60px", fontWeight: "bold" }}>
+        <Title
+          className="title"
+          style={{ fontSize: "60px", fontWeight: "bold" }}
+        >
           Need additional <br /> information?
         </Title>
         <Text
@@ -50,8 +54,8 @@ const ContactForm = () => {
           href="https://ant.design"
           target="_blank"
         >
-          <PhoneOutlined style={{ color: "#cb3737" }}></PhoneOutlined> (123) 456
-          - 789
+          <PhoneOutlined style={{ color: "#cb3737" }}></PhoneOutlined>{" "}
+          <Text type="secondary">(123)456-789</Text>
         </Link>{" "}
         <Link
           style={{
@@ -64,9 +68,10 @@ const ContactForm = () => {
           target="_blank"
         >
           <MailOutlined style={{ color: "#cb3737" }}></MailOutlined>{" "}
-          abc@gmail.com
+          <Text type="secondary">abc@gmail.com</Text>
         </Link>{" "}
         <Link
+          className="blah"
           style={{
             marginTop: "15px",
             fontSize: "26px",
@@ -79,7 +84,8 @@ const ContactForm = () => {
           <EnvironmentOutlined
             style={{ color: "#cb3737" }}
           ></EnvironmentOutlined>{" "}
-          Los Angeles
+                    <Text type="secondary">California</Text>
+
         </Link>
       </div>
       <div className="contact-form">

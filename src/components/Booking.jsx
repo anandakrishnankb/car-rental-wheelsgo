@@ -7,6 +7,12 @@ import CarToyota from "../images/toyotacamry.jpg";
 import CarBmw from "../images/bmw320.jpg";
 import CarMercedes from "../images/benz.jpg";
 import CarPassat from "../images/passatcc.jpg";
+import {
+  CalendarFilled,
+  CalendarOutlined,
+  EnvironmentFilled,
+  InfoCircleOutlined,
+} from "@ant-design/icons";
 
 const { Title, Text } = Typography;
 const Booking = () => {
@@ -148,6 +154,7 @@ const Booking = () => {
           <div className="booking-container">
             <div className="booking-box">
               <Title
+                className="title-head"
                 style={{
                   fontWeight: "700",
                 }}
@@ -268,7 +275,9 @@ const Booking = () => {
       <div className={`booking-modal ${modal ? "active-modal" : ""}`}>
         {/* title */}
         <div className="modal-title ">
-          <Title style={{ color: "white" }}>Complete Reservation</Title>
+          <Title className="title-sub" style={{ color: "white" }}>
+            Complete Reservation
+          </Title>
           {/* <h2>Complete Reservation</h2> */}
           <Button
             onClick={openModal}
@@ -287,6 +296,9 @@ const Booking = () => {
         <div className="modal-message">
           <Title level={3} className="modal-warning">
             {" "}
+            <InfoCircleOutlined
+              style={{ marginRight: "10px", color: "#cb3737" }}
+            ></InfoCircleOutlined>
             Upon completing this reservation enquiry, you will receive:
           </Title>
           {/* <h4 className="modal-warning">
@@ -322,6 +334,9 @@ const Booking = () => {
               <span>
                 <div>
                   <Title level={3} className="modal-from-labels">
+                    <CalendarFilled
+                      style={{ color: "#cb3737", marginRight: "10px" }}
+                    ></CalendarFilled>{" "}
                     Pick-Up Date & Time
                   </Title>
                   {/* <h6 className="modal-from-labels">Pick-Up Date & Time</h6> */}
@@ -337,6 +352,9 @@ const Booking = () => {
               <span>
                 <div>
                   <Title level={3} className="modal-from-labels">
+                    <CalendarFilled
+                      style={{ color: "#cb3737", marginRight: "10px" }}
+                    ></CalendarFilled>
                     Drop-Off Date & Time
                   </Title>
 
@@ -353,6 +371,9 @@ const Booking = () => {
               <span>
                 <div>
                   <Title level={3} className="modal-from-labels">
+                    <EnvironmentFilled
+                      style={{ color: "#cb3737", marginRight: "10px" }}
+                    ></EnvironmentFilled>
                     Pick-Up Location
                   </Title>
 
@@ -366,6 +387,9 @@ const Booking = () => {
               <span>
                 <div>
                   <Title level={3} className="modal-from-labels">
+                    <EnvironmentFilled
+                      style={{ color: "#cb3737", marginRight: "10px" }}
+                    ></EnvironmentFilled>
                     Drop-Off Location
                   </Title>
 
@@ -513,26 +537,10 @@ const Booking = () => {
               </span>
             </div>
 
-            <span className="info-form__checkbox">
-              <Checkbox
-                style={{
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                }}
-              >
-                <Text
-                  style={{
-                    fontSize: "26px",
-                  }}
-                  type="primary"
-                >
-                  Please send me latest news and updates
-                </Text>
-              </Checkbox>
+            
               {/* <input style={{ fontSize: "26px" }} type="checkbox"></input> */}
-            </span>
 
-            <div className="modal-foot">
+            <div >
               <button className="red-btn" onClick={confirmBooking}>
                 Reserve Now
               </button>

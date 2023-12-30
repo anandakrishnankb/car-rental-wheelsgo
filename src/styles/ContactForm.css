@@ -1,17 +1,43 @@
-.contact-form-wrap{
-    padding: 150px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.contact-form-wrap {
+  padding: 150px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.contact-text{
-display: flex;
-flex-direction: column;
-margin-right: 50px;
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
 }
-.contact-form{
-    margin-left: 50px;
-    width: 500px;
-    margin-left: 100px;
+.contact-form {
+  margin-left: 50px;
+  width: 500px;
+  margin-left: 100px;
+}
+
+@media screen and (max-width: 992px) {
+  .contact-form-wrap {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-text > Link {
+    font-size: 18px !;
+  }
+  .contact-text .anticon {
+    width: 18px;
+    vertical-align: middle; /* Aligns the icon vertically in the middle of the line */
+    margin-right: 10px; /* Adjust as needed for spacing between the icon and text */
+  }
+
+  .contact-form {
+    margin: 0;
+    width: 320px;
+    margin-top: 50px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 18px !important;
+  }
 }

@@ -6,12 +6,11 @@ function SectionHero({ name }) {
   return (
     <>
       <section className="section-pages">
-        <div className="hero-pages__overlay"></div>
         <div className="container">
           <div className="section-page-text">
-            <Title style={{fontSize:"50px",fontWeight:"700"}} >{name}</Title>
+            <Title className="title" style={{fontSize:"50px",fontWeight:"700"}} >{name}</Title>
             <p>
-              <Link to="/">Home</Link> / {name}
+              <Link style={{textDecoration:"none",color:"black"}} className="title-head" to="/">Home</Link> /<Title className="title-head">{name}</Title>
             </p>
           </div>
         </div>

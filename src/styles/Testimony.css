@@ -21,3 +21,14 @@
     margin-top: 0; /* Remove top margin for the first card */
   }
 }
+@media (max-width: 992px){
+.ant-card{
+  width: 320px !important;
+}
+#testimony-section{
+  padding: 30px;
+}
+.ant-card-body{
+  padding: 0px !important;
+}
+}

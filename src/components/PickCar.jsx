@@ -18,8 +18,8 @@ const PickCar = () => {
     <div>
       <section id="pick-car-sec">
         <div className="pickcar-sec-titles sec-titles">
-          <Title>Vehicle Models</Title>
-          <Title
+          <Title className="title-head">Vehicle Models</Title>
+          <Title className="title"
             style={{
               fontSize: "60px",
               margin: "0px",
@@ -27,7 +27,7 @@ const PickCar = () => {
           >
             Our Rental Fleet
           </Title>
-          <Text
+          <Text 
             style={{
               fontSize: "26px",
             }}

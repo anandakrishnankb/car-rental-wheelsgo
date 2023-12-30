@@ -71,3 +71,9 @@
 .about-icons {
   display: flex;
 }
+
+@media screen and (max-width: 992px) {
+  .nav-bar{
+    display: none;
+  }
+}

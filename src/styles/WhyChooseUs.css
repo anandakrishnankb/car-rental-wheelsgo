@@ -40,3 +40,18 @@
     padding: 0 90px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  h1.ant-typography {
+    font-size: 26px;
+  }
+  .chooseus-text-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .chooseus-text-container{
+    padding: 30px;
+  }
+}
