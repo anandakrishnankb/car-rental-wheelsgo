@@ -39,7 +39,7 @@ const Navbar = () => {
               duration={500}
             >
               <Button
-                style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
+                style={{ fontSize: "25px", fontWeight: "600", height: "50px" }}
                 type="text"
               >
                 Home
@@ -53,7 +53,7 @@ const Navbar = () => {
             >
               <Button
                 style={{
-                  fontSize: "20px",
+                  fontSize: "25px",
                   fontWeight: "600",
                   height: "50px",
                 }}
@@ -71,7 +71,7 @@ const Navbar = () => {
               duration={500}
             >
               <Button
-                style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
+                style={{ fontSize: "25px", fontWeight: "600", height: "50px" }}
                 type="text"
               >
                 Vehicle Models
@@ -86,7 +86,7 @@ const Navbar = () => {
               duration={500}
             >
               <Button
-                style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
+                style={{ fontSize: "25px", fontWeight: "600", height: "50px" }}
                 type="text"
               >
                 {" "}
@@ -104,7 +104,7 @@ const Navbar = () => {
               duration={500}
             >
               <Button
-                style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
+                style={{ fontSize: "25px", fontWeight: "600", height: "50px" }}
                 type="text"
               >
                 {" "}
