@@ -1,0 +1,213 @@
+.nav-bar {
+    background: #fff;
+    top: 0;
+    display: flex;
+    height: 100px;
+    color: #333;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  
+    box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  .logo-container {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-name {
+    margin-left: 20px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .nav-links {
+    padding: 30px;
+  }
+  .nav-links > a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 33px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+  .nav-links > .nav-link-icons:hover {
+    color: rgb(0, 0, 0);
+    
+  }
+  .hamburger div{
+    width: 1.8rem;
+    height: 0.2rem;
+    background-color: #2f2e2e;
+    margin: .3rem .6rem;
+    transition: .3s ease-in;
+  }
+  .nav-link-icons {
+    cursor: pointer;
+  }
+  .hamburger{
+    display: none;
+    cursor: pointer;
+  }
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+    }
+    .nav-bar{
+      height: 80px;
+    }
+    .nav-name {
+      margin-left: 8px;
+    }
+    .logo-container {
+      padding: 5px 15px;
+      font-size: 15px;
+    }
+    .nav-links > .nav-link-icons {
+      
+      color: rgb(0, 0, 0);
+      padding: 50px;
+      font-size: 30px;
+    }
+    .nav-links {
+      position: absolute;
+      margin-top: 70px;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100vh;
+      /* background: white; */
+      background: transparent;
+      backdrop-filter: blur(10px);
+  
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: 0.3s ease-in;
+    }
+    .hamburger-active {
+      transform: translateX(0);
+    }
+    .toggle .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line2 {
+      opacity: 0;
+    }
+    .toggle .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  
+    .home-title {
+      font-size: 30px;
+    }
+    .home-contents {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10rem 5rem;
+  
+      width: 100%;
+    }
+    .home-para {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .mobile-btn {
+      font-size: 10px;
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .home-hero-socials {
+      position: absolute;
+      top: 40%;
+  
+      left: 0;
+      transform: translateY(-50%);
+      background: #fff;
+      box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+      margin-left: 0;
+      border-radius: 8px;
+    }
+    .home-hero-social-icon-link {
+      width: 100%;
+      display: block;
+      padding: 0.5rem;
+      transition: background 0.3s;
+      border-radius: 5px;
+    }
+  
+    .title {
+      font-size: 30px;
+      padding: 70px;
+      padding-bottom: 30px;
+    }
+    .subtitle {
+      font-size: 20px;
+      padding: 30px 20px 0 20px;
+      line-height: 1.5;
+    }
+    .aboutme-main-contents {
+      display: flex;
+      flex-direction: column;
+      padding: 80px 30px;
+    }
+    .get-to-know-me-para {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .get-to-know-me {
+      padding: 0;
+      width: 100%;
+    }
+    .my-skills {
+      padding: 80px 0px;
+      width: 100%;
+    }
+    .project-row {
+      display: flex;
+      flex-direction: column;
+    }
+    .project-desc {
+      padding: 0px;
+      text-align: center;
+    }
+    .project-title {
+      margin-top: 50px;
+      padding-top: 0px;
+    }
+    .project-defenition{
+      line-height: 1.7;
+    }
+    .form-container{
+      padding: 20px;
+    }
+    .footer-title{
+      font-size: 20px;
+    }
+    .footer-desc{
+      font-size: 12px;
+    }
+    .footer-below{
+      padding: 10px 30px;
+    }
+  }

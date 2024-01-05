@@ -1,19 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../images/app-logo.png";
 import { Typography, Button } from "antd";
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 const Navbar = () => {
+  const [active, setActive] = useState("nav-links hidden");
+  const [toggleIcon, setToggleIcon] = useState("hamburger");
+  const toggle = () => {
+    active === "nav-links hidden"
+      ? setActive("nav-links hamburger-active")
+      : setActive("nav-links hidden");
+
+    toggleIcon === "hamburger"
+      ? setToggleIcon("hamburger toggle")
+      : setToggleIcon("hamburger");
+  };
   return (
     <section id="nav-sec">
       <div className="nav-container">
         <div className="nav-bar">
           <div className="logo-container">
-            <img src={Logo} alt="" />
+            <img className="logo" src={Logo} alt="" />
+            <Title
+              style={{ margin: "0px", marginLeft: "5px" }}
+              className="title-head"
+            >
+              WheelsGo
+            </Title>
           </div>
-          <div className="nav-links">
-            <Link to="/" smooth={true} duration={500}>
+          {/* <div className="nav-links"> */}
+          <div className={active}>
+            <Link
+              className="nav-link-icons"
+              activeclass="active"
+              to="/"
+              smooth={true}
+              duration={500}
+            >
               <Button
                 style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
                 type="text"
@@ -21,7 +45,12 @@ const Navbar = () => {
                 Home
               </Button>
             </Link>
-            <Link to="/about" smooth={true} duration={500}>
+            <Link
+              className="nav-link-icons"
+              to="/about"
+              smooth={true}
+              duration={500}
+            >
               <Button
                 style={{
                   fontSize: "20px",
@@ -35,7 +64,12 @@ const Navbar = () => {
 
               {/* About */}
             </Link>
-            <Link to="/models" smooth={true} duration={500}>
+            <Link
+              className="nav-link-icons"
+              to="/models"
+              smooth={true}
+              duration={500}
+            >
               <Button
                 style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
                 type="text"
@@ -45,7 +79,12 @@ const Navbar = () => {
 
               {/* Vehicle Models */}
             </Link>
-            <Link to="/testimonial" smooth={true} duration={500}>
+            <Link
+              className="nav-link-icons"
+              to="/testimonial"
+              smooth={true}
+              duration={500}
+            >
               <Button
                 style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
                 type="text"
@@ -58,7 +97,12 @@ const Navbar = () => {
             </Link>
 
             {/* Our Team */}
-            <Link to="/contact" smooth={true} duration={500}>
+            <Link
+              className="nav-link-icons"
+              to="/contact"
+              smooth={true}
+              duration={500}
+            >
               <Button
                 style={{ fontSize: "20px", fontWeight: "600", height: "50px" }}
                 type="text"
@@ -69,11 +113,15 @@ const Navbar = () => {
 
               {/* Contact */}
             </Link>
+            {/* <div className="nav-buttons">
+              <button className="signin-btn">Sign In</button>
+              <button className="red-btn">Register</button>
+            </div> */}
           </div>
-
-          <div className="nav-buttons">
-            <button className="signin-btn">Sign In</button>
-            <button className="red-btn">Register</button>
+          <div onClick={toggle} className={toggleIcon}>
+            <div className="line1"></div>
+            <div className="line2"></div>
+            <div className="line3"></div>
           </div>
         </div>
       </div>

@@ -31,4 +31,7 @@
 .ant-card-body{
   padding: 0px !important;
 }
+.card-wrap{
+  padding: 0px;
+}
 }
