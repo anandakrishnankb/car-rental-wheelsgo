@@ -5,7 +5,9 @@
   /* font-family: "Rubik", sans-serif; */
   font-family: "Resolve", sans-serif;
 }
-
+html{
+  zoom: 0.8;
+}
 .para {
   font-size: 26px;
   color: #706f7b;
