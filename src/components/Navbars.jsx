@@ -24,7 +24,6 @@ const Navbars = () => {
           activeClass="active"
           to="Home"
           spy={true}
-          smooth={true}
         >
           ANANDAKRISHNAN KB
         </Link>
@@ -35,7 +34,6 @@ const Navbars = () => {
           activeClass="active"
           to="home-sec"
           spy={true}
-          smooth={true}
         >
           Home
         </Link>
@@ -44,7 +42,6 @@ const Navbars = () => {
           activeClass="active"
           to="AboutMe"
           spy={true}
-          smooth={true}
           offset={-100}
         >
           About
@@ -54,7 +51,6 @@ const Navbars = () => {
           activeClass="active"
           to="Projects"
           spy={true}
-          smooth={true}
           offset={-100}
         >
           Projects
@@ -64,7 +60,6 @@ const Navbars = () => {
           activeClass="active"
           to="Contact"
           spy={true}
-          smooth={true}
         >
           Contact
         </Link>

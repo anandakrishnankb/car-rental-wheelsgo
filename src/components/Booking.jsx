@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Typography, Checkbox, Button } from "antd";
+import emailjs from "@emailjs/browser";
+import { Typography, Checkbox, Button, message } from "antd";
 import CarAudi from "../images/audia1.jpg";
 import CarGolf from "../images/golf6.jpg";
 import CarToyota from "../images/toyotacamry.jpg";
@@ -60,12 +61,61 @@ const Booking = () => {
     setZipCode(e.target.value);
   };
 
-  const confirmBooking = (e) => {
+  const confirmBooking = async (e) => {
     e.preventDefault();
-    setModal(!modal);
-    const doneMsg = document.querySelector(".booking-done");
-    doneMsg.style.display = "flex";
+    if (
+      carType === "" ||
+      pickUp === "" ||
+      dropOff === "" ||
+      pickTime === "" ||
+      dropTime === "" ||
+      name === "" ||
+      lastName === "" ||
+      phone === "" ||
+      age === "" ||
+      email === "" ||
+      address === "" ||
+      city === "" ||
+      zipcode === ""
+    ) {
+      message.error("Fill All Fields");
+    } else {
+      setModal(!modal);
+      const doneMsg = document.querySelector(".booking-done");
+      doneMsg.style.display = "flex";
+      // resetFields();
+
+      try {
+        // Send email using emailjs.send
+        const templateParams = {
+          // Your email template parameters here
+          // For example:
+          user_name: name,
+          user_last_name: lastName,
+          user_phone: phone,
+          user_age: age,
+          user_email: email,
+          user_address: address,
+          user_city: city,
+          user_zipcode: zipcode,
+          // Add other parameters as needed
+        };
+
+        const emailResult = await emailjs.send(
+          "service_2hppe2q", // Replace with your service ID
+          "template_q4dzqsz", // Replace with your template ID
+          templateParams,
+          "idmMs4RBfhBCmYl_-" // Replace with your user ID
+        );
+
+        console.log("Email sent successfully:", emailResult);
+      } catch (error) {
+        console.error("Error sending email:", error);
+      }
+      
+    }
   };
+
   // Booking Inputs and Values
   const [carType, setCarType] = useState("");
   const [pickUp, setPickUp] = useState("");
@@ -111,6 +161,7 @@ const Booking = () => {
       const modalDiv = document.querySelector(".booking-modal");
       modalDiv.scroll(0, 0);
       errorMsg.style.display = "none";
+      // resetFields();
     }
   };
   //   Choosing Car Image
@@ -171,7 +222,7 @@ const Booking = () => {
                 Check your email to confirm the order.
               </p> */}
               <Text className="booking-done" type="success">
-                Check your email to confirm the order.
+                Email Sent Succesfully.Our Staff Will Contact You Shortly.Happy Drive!
               </Text>
               <form className="box-form">
                 <div className="book-first-row">
@@ -537,10 +588,9 @@ const Booking = () => {
               </span>
             </div>
 
-            
-              {/* <input style={{ fontSize: "26px" }} type="checkbox"></input> */}
+            {/* <input style={{ fontSize: "26px" }} type="checkbox"></input> */}
 
-            <div >
+            <div>
               <button className="red-btn" onClick={confirmBooking}>
                 Reserve Now
               </button>

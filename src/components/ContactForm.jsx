@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Typography, Form, Input, InputNumber, Button, message } from "antd";
 import { Link } from "react-router-dom";
 import {
@@ -18,13 +19,46 @@ const validateMessages = {
     range: "${label} must be between ${min} and ${max}",
   },
 };
-/* eslint-enable no-template-curly-in-string */
 
-const onFinish = (values) => {
-  message.success("Form Submitted!")
-  console.log(values);
-};
+// const onFinish = (values) => {
+//   message.success("Form Submitted!")
+//   console.log(values);
+// };
 const ContactForm = () => {
+  const [formValues, setFormValues] = useState({});
+
+  const sentMsg = async (e) => {
+    e.preventDefault();
+    message.success("Message Sent");
+    console.log(formValues)
+    console.log(formValues.name)
+
+    try {
+      // Send email using emailjs.send
+      const templateParams = {
+        user_name: formValues.name,
+        user_email: formValues.email,
+        user_message: formValues.introduction,
+        // Add other parameters as needed
+      };
+
+      const emailResult = await emailjs.send(
+        "service_2hppe2q", // Replace with your service ID
+        "template_q4dzqsz", // Replace with your template ID
+        templateParams,
+        "idmMs4RBfhBCmYl_-" // Replace with your user ID
+      );
+
+      console.log("Email sent successfully:", emailResult);
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
+  const handleFormChange = (changedValues, allValues) => {
+    setFormValues(allValues.user);
+  };
+
   return (
     <div className="contact-form-wrap">
       <div className="contact-text">
@@ -84,14 +118,13 @@ const ContactForm = () => {
           <EnvironmentOutlined
             style={{ color: "#cb3737" }}
           ></EnvironmentOutlined>{" "}
-                    <Text type="secondary">California</Text>
-
+          <Text type="secondary">California</Text>
         </Link>
       </div>
       <div className="contact-form">
         <Form
           name="nest-messages"
-          onFinish={onFinish}
+          // onFinish={onFinish}
           style={{
             maxWidth: 600,
           }}
@@ -107,7 +140,7 @@ const ContactForm = () => {
             ]}
             labelCol={{ span: 24 }}
             wrapperCol={{ span: 24 }}
-            style={{ fontSize: "24px" }} // Set the font size for the label
+            style={{ fontSize: "24px" }}
           >
             <Input
               style={{
@@ -115,6 +148,9 @@ const ContactForm = () => {
                 padding: "10px",
               }}
               placeholder="Enter your name"
+              onChange={(e) =>
+                setFormValues({ ...formValues, name: e.target.value })
+              }
             />
           </Form.Item>
           <Form.Item
@@ -128,7 +164,7 @@ const ContactForm = () => {
             ]}
             labelCol={{ span: 24 }}
             wrapperCol={{ span: 24 }}
-            style={{ fontSize: "24px" }} // Set the font size for the label
+            style={{ fontSize: "24px" }}
           >
             <Input
               style={{
@@ -136,6 +172,9 @@ const ContactForm = () => {
                 padding: "10px",
               }}
               placeholder="Enter your email"
+              onChange={(e) =>
+                setFormValues({ ...formValues, email: e.target.value })
+              }
             />
           </Form.Item>
           <Form.Item
@@ -143,7 +182,7 @@ const ContactForm = () => {
             label="Tell Us About It"
             labelCol={{ span: 24 }}
             wrapperCol={{ span: 24 }}
-            style={{ fontSize: "24px" }} // Set the font size for the label
+            style={{ fontSize: "24px" }}
           >
             <Input.TextArea
               style={{
@@ -151,6 +190,9 @@ const ContactForm = () => {
                 padding: "10px",
               }}
               placeholder="Enter your introduction"
+              onChange={(e) =>
+                setFormValues({ ...formValues, introduction: e.target.value })
+              }
             />
           </Form.Item>
           <Form.Item>
@@ -163,6 +205,7 @@ const ContactForm = () => {
                 borderRadius: "3px",
                 color: "white",
               }}
+              onClick={sentMsg}
               type="primary"
               htmlType="submit"
             >

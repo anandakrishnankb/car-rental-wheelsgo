@@ -1,7 +1,17 @@
+import { Button, Typography } from "antd";
 import { useState } from "react";
 
 function CarBox({ data, carID }) {
+  const { Title, Text } = Typography;
   const [carLoad, setCarLoad] = useState(true);
+
+  const navigateTo = (sectionId) => {
+    if (window.location.pathname === "/") {
+      document.querySelector(sectionId).scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "/";
+    }
+  };
   return (
     <>
       {data[carID].map((car, id) => (
@@ -58,9 +68,31 @@ function CarBox({ data, carID }) {
               </div>
             </div>
             {/* btn cta */}
-            <a className="cta-btn" href="#booking-section">
+            <Button
+              style={{
+                backgroundColor: "#cb3737",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+                height: "60px",
+                width: "200px",
+                marginTop: "15px",
+              }}
+              onClick={() => {
+                navigateTo("#booking-sec");
+              }}
+            >
+              <Title
+                style={{
+                  margin: "0px",
+                  color: "white",
+                }}
+                level={3}
+              >
+                Reserve Now
+              </Title>
+            </Button>
+            {/* <a className="cta-btn" href="#booking-sec">
               Reserve Now
-            </a>
+            </a> */}
           </div>
         </div>
       ))}

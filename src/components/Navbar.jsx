@@ -35,7 +35,6 @@ const Navbar = () => {
               className="nav-link-icons"
               activeclass="active"
               to="/"
-              smooth={true}
               duration={500}
             >
               <Button
@@ -48,7 +47,6 @@ const Navbar = () => {
             <Link
               className="nav-link-icons"
               to="/about"
-              smooth={true}
               duration={500}
             >
               <Button
@@ -67,7 +65,6 @@ const Navbar = () => {
             <Link
               className="nav-link-icons"
               to="/models"
-              smooth={true}
               duration={500}
             >
               <Button
@@ -82,7 +79,6 @@ const Navbar = () => {
             <Link
               className="nav-link-icons"
               to="/testimonial"
-              smooth={true}
               duration={500}
             >
               <Button
@@ -100,7 +96,6 @@ const Navbar = () => {
             <Link
               className="nav-link-icons"
               to="/contact"
-              smooth={true}
               duration={500}
             >
               <Button

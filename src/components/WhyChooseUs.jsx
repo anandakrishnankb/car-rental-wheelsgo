@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactDOM } from "react";
 import CarsBG from "../images/chooseus-cars.png";
 import Country from "../images/cross-country-drive.jpg";
 import Hidden from "../images/hidden-charges.jpg";
@@ -8,6 +9,9 @@ import { Typography } from "antd";
 
 const { Title, Text } = Typography;
 const WhyChooseUs = () => {
+  const navigateTo = (sectionId) => {
+    document.querySelector(sectionId).scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <section id="choose_us-sec">
       <div className="img-container">
@@ -17,7 +21,8 @@ const WhyChooseUs = () => {
         <div className="chooseus-left-text-container">
           <div className="left-titles">
             <Title className="title-head">Why Choose Us?</Title>
-            <Title className="title"
+            <Title
+              className="title"
               style={{
                 fontSize: "60px",
                 marginTop: "0px",
@@ -41,8 +46,15 @@ const WhyChooseUs = () => {
               </Text>
             </div>
           </div>
-          <button style={{marginTop:"25px"}} className="red-btn">Find Details</button>
-
+          <button
+            onClick={() => {
+              navigateTo("#hero-sec");
+            }}
+            style={{ marginTop: "25px" }}
+            className="red-btn"
+          >
+            Find Details
+          </button>
         </div>
         <div className="chooseus-right-text-container">
           <div className="right-card">
