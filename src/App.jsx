@@ -1,15 +1,6 @@
-import { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Booking from "./components/Booking";
-import PlanTrip from "./components/PlanTrip";
-import PickCar from "./components/PickCar";
-import Banner from "./components/Banner";
-import WhyChooseUs from "./components/WhyChooseUs";
-import Testimony from "./components/Testimony";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AboutPage from "./pages/About";
-import HomePage from "./pages/Home.jsx"
+import HomePage from "./pages/Home.jsx";
 import ModelsPage from "./pages/Vehicles.jsx";
 import TestimonialsPage from "./pages/Testimonials.jsx";
 import ContactPage from "./pages/Contact.jsx";
@@ -26,7 +17,6 @@ import "./styles/Testimony.css";
 import "./styles/Footer.css";
 import "./styles/AboutPage.css";
 import "./styles/ContactForm.css";
-import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -35,10 +25,11 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="models" element={<ModelsPage />} />
-        <Route path="testimonial" element={<TestimonialsPage />} /><Route path="models" element={<ModelsPage />} />
+        <Route path="testimonial" element={<TestimonialsPage />} />
+        <Route path="models" element={<ModelsPage />} />
         <Route path="contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );
 }
-export default App
+export default App;

@@ -10,7 +10,8 @@ const Process = () => {
     <section id="process-sec">
       <div className="process-sec-titles sec-titles">
         <Title className="title-head">Plan your Trip Now</Title>
-        <Title className="title"
+        <Title
+          className="title"
           style={{
             fontSize: "60px",
             margin: "0px",
@@ -22,7 +23,10 @@ const Process = () => {
       <div className="process-container">
         <div className="process-box">
           <img className="process-img" src={Select} alt="" />
-          <Title style={{ marginTop:"15px", fontWeight: "600", fontSize: "35px" }} level={2}>
+          <Title
+            style={{ marginTop: "15px", fontWeight: "600", fontSize: "35px" }}
+            level={2}
+          >
             {" "}
             Select a Car
           </Title>
@@ -40,7 +44,10 @@ const Process = () => {
         </div>
         <div className="process-box">
           <img className="process-img" src={Operator} alt="" />
-          <Title style={{ marginTop:"15px", fontWeight: "600", fontSize: "35px" }} level={2}>
+          <Title
+            style={{ marginTop: "15px", fontWeight: "600", fontSize: "35px" }}
+            level={2}
+          >
             Contact Operator
           </Title>
 
@@ -57,10 +64,12 @@ const Process = () => {
         </div>
         <div className="process-box">
           <img className="process-img" src={Drive} alt="" />
-          <Title style={{ marginTop:"15px", fontWeight: "600", fontSize: "35px" }} level={2}>
+          <Title
+            style={{ marginTop: "15px", fontWeight: "600", fontSize: "35px" }}
+            level={2}
+          >
             Lets Drive
           </Title>
-          {/* <h2 className="process-heading">Lets Drive</h2> */}
           <Text
             style={{
               fontSize: "26px",

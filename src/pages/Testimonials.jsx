@@ -1,20 +1,20 @@
-import React from 'react'
+import React from "react";
 import Testimony from "../components/Testimony";
 import Footer from "../components/Footer";
-import SectionHero from '../components/SectionHero';
-import Navbar from '../components/Navbar';
-import Banner from '../components/Banner';
+import SectionHero from "../components/SectionHero";
+import Navbar from "../components/Navbar";
+import Banner from "../components/Banner";
 
 const Testimonials = () => {
   return (
     <section id="testimonials-page">
-      <Navbar/>
-      <SectionHero name="Testimonials"/>
-      <Testimony/>
-      <Banner/>
-      <Footer/>
+      <Navbar />
+      <SectionHero name="Testimonials" />
+      <Testimony />
+      <Banner />
+      <Footer />
     </section>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;

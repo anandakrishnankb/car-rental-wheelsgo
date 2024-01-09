@@ -19,7 +19,8 @@ const PickCar = () => {
       <section id="pick-car-sec">
         <div className="pickcar-sec-titles sec-titles">
           <Title className="title-head">Vehicle Models</Title>
-          <Title className="title"
+          <Title
+            className="title"
             style={{
               fontSize: "60px",
               margin: "0px",
@@ -27,7 +28,7 @@ const PickCar = () => {
           >
             Our Rental Fleet
           </Title>
-          <Text 
+          <Text
             style={{
               fontSize: "26px",
             }}
@@ -40,7 +41,7 @@ const PickCar = () => {
         <div className="container">
           <div className="pick-container">
             <div className="pick-container__car-content">
-              {/* pick car */}
+              {/* pick-car */}
               <div className="pick-box">
                 <button
                   className={`${coloringButton("btn1")}`}
@@ -89,7 +90,7 @@ const PickCar = () => {
                     }}
                   >
                     {" "}
-                   Toyota Camry
+                    Toyota Camry
                   </Text>
                 </button>
                 <button
@@ -134,7 +135,7 @@ const PickCar = () => {
                     btnID("btn6");
                   }}
                 >
-                 <Text
+                  <Text
                     style={{
                       fontSize: "24px",
                     }}

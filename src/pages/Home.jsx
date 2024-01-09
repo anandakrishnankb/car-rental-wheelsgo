@@ -13,13 +13,13 @@ const Home = () => {
     <section id="home-page">
       <Navbar />
       <Hero />
-      <Booking/>
-      <PlanTrip/>
-      <PickCar/>
-      <Banner/>
-      <WhyChooseUs/>
-      <Testimony/>
-      <Footer/>
+      <Booking />
+      <PlanTrip />
+      <PickCar />
+      <Banner />
+      <WhyChooseUs />
+      <Testimony />
+      <Footer />
     </section>
   );
 };

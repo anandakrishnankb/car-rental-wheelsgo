@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import { Typography, Checkbox, Button, message } from "antd";
+import { Typography, Button, message } from "antd";
 import CarAudi from "../images/audia1.jpg";
 import CarGolf from "../images/golf6.jpg";
 import CarToyota from "../images/toyotacamry.jpg";
@@ -10,13 +10,14 @@ import CarMercedes from "../images/benz.jpg";
 import CarPassat from "../images/passatcc.jpg";
 import {
   CalendarFilled,
-  CalendarOutlined,
   EnvironmentFilled,
   InfoCircleOutlined,
 } from "@ant-design/icons";
 
 const { Title, Text } = Typography;
 const Booking = () => {
+
+
   // Modal and Modal Inputs
   const [modal, setModal] = useState(false);
   useEffect(() => {
@@ -83,13 +84,9 @@ const Booking = () => {
       setModal(!modal);
       const doneMsg = document.querySelector(".booking-done");
       doneMsg.style.display = "flex";
-      // resetFields();
 
       try {
-        // Send email using emailjs.send
         const templateParams = {
-          // Your email template parameters here
-          // For example:
           user_name: name,
           user_last_name: lastName,
           user_phone: phone,
@@ -98,7 +95,6 @@ const Booking = () => {
           user_address: address,
           user_city: city,
           user_zipcode: zipcode,
-          // Add other parameters as needed
         };
 
         const emailResult = await emailjs.send(
@@ -161,7 +157,6 @@ const Booking = () => {
       const modalDiv = document.querySelector(".booking-modal");
       modalDiv.scroll(0, 0);
       errorMsg.style.display = "none";
-      // resetFields();
     }
   };
   //   Choosing Car Image
@@ -213,14 +208,9 @@ const Booking = () => {
               >
                 Book a car
               </Title>
-              {/* <h2 className="booking-box-title">Book a car</h2> */}
               <Text className="error-message" type="danger">
                 Fill All Fields!
               </Text>
-              {/* <p className="error-message">Fill All Fields!</p> */}
-              {/* <p className="booking-done">
-                Check your email to confirm the order.
-              </p> */}
               <Text className="booking-done" type="success">
                 Email Sent Succesfully.Our Staff Will Contact You Shortly.Happy Drive!
               </Text>
@@ -324,12 +314,10 @@ const Booking = () => {
 
       {/* modal-part  */}
       <div className={`booking-modal ${modal ? "active-modal" : ""}`}>
-        {/* title */}
         <div className="modal-title ">
           <Title className="title-sub" style={{ color: "white" }}>
             Complete Reservation
           </Title>
-          {/* <h2>Complete Reservation</h2> */}
           <Button
             onClick={openModal}
             style={{
@@ -343,7 +331,6 @@ const Booking = () => {
             X
           </Button>
         </div>
-        {/* message */}
         <div className="modal-message">
           <Title level={3} className="modal-warning">
             {" "}
@@ -352,9 +339,7 @@ const Booking = () => {
             ></InfoCircleOutlined>
             Upon completing this reservation enquiry, you will receive:
           </Title>
-          {/* <h4 className="modal-warning">
-            Upon completing this reservation enquiry, you will receive:
-          </h4> */}
+          
           <Text
             style={{
               fontSize: "26px",
@@ -364,10 +349,7 @@ const Booking = () => {
             Your rental voucher to produce on arrival at the rental desk and a
             toll-free customer support number.
           </Text>
-          {/* <p className="para">
-            Your rental voucher to produce on arrival at the rental desk and a
-            toll-free customer support number.
-          </p> */}
+         
         </div>
         {/* car info */}
         <div className="modal-car-info">
@@ -381,7 +363,6 @@ const Booking = () => {
               >
                 Location & Date
               </Title>
-              {/* <h5 className="modal-info-title">Location & Date</h5> */}
               <span>
                 <div>
                   <Title level={3} className="modal-from-labels">
@@ -390,7 +371,6 @@ const Booking = () => {
                     ></CalendarFilled>{" "}
                     Pick-Up Date & Time
                   </Title>
-                  {/* <h6 className="modal-from-labels">Pick-Up Date & Time</h6> */}
                   <p>
                     {pickTime} /{" "}
                     <input type="time" className="input-time"></input>
@@ -409,7 +389,6 @@ const Booking = () => {
                     Drop-Off Date & Time
                   </Title>
 
-                  {/* <h6 className="modal-from-labels">Drop-Off Date & Time</h6> */}
                   <p>
                     {dropTime} /{" "}
                     <input type="time" className="input-time"></input>
@@ -428,7 +407,6 @@ const Booking = () => {
                     Pick-Up Location
                   </Title>
 
-                  {/* <h6 className="modal-from-labels">Pick-Up Location</h6> */}
                   <p>{pickUp}</p>
                 </div>
               </span>
@@ -444,7 +422,6 @@ const Booking = () => {
                     Drop-Off Location
                   </Title>
 
-                  {/* <h6 className="modal-from-labels">Drop-Off Location</h6> */}
                   <p>{dropOff}</p>
                 </div>
               </span>
@@ -458,9 +435,7 @@ const Booking = () => {
             >
               <span style={{ color: "#cb3737" }}>Car -</span> {carType}
             </Title>
-            {/* <h5 className="modal-info-title"> */}
-            {/* <span>Car -</span> {carType} */}
-            {/* </h5> */}
+         
             {imgUrl && <img src={imgUrl} alt="car_img" />}
           </div>
         </div>
@@ -588,7 +563,6 @@ const Booking = () => {
               </span>
             </div>
 
-            {/* <input style={{ fontSize: "26px" }} type="checkbox"></input> */}
 
             <div>
               <button className="red-btn" onClick={confirmBooking}>
@@ -604,36 +578,4 @@ const Booking = () => {
 
 export default Booking;
 
-{
-  /* <div className="hero-card">
-        <h2 className="card-title">Book a Car</h2>
-        <div className="hero-card-contents">
-        <div className="hero-card-row">
-          <div className="hero-card-col">
-            <h3 className="hero-card-input-titles">Car Model</h3>
-            <input className="hero-card-inputs" type="text" />
-          </div>
-          <div className="hero-card-col">
-            <h3 className="hero-card-input-titles">Pick Up</h3>
-            <input className="hero-card-inputs" type="text" />
-          </div>
-          <div className="hero-card-col">
-            <h3 className="hero-card-input-titles"><FontAwesomeIcon icon="fa-solid fa-location-dot" />Drop Of</h3>
-            <input className="hero-card-inputs" type="text" />
-          </div>
-        </div>
-        <div className="hero-card-row">
-          <div className="hero-card-col">
-            <h3 className="hero-card-input-titles">Pick Up</h3>
-            <input className="hero-card-inputs" type="text" />
-          </div>
-          <div className="hero-card-col">
-            <h3 className="hero-card-input-titles">Drop Of</h3>
-            <input className="hero-card-inputs" type="text" />
-          </div>
-          <div className="hero-card-col">
-            <button className="orange-btn hero-card-search-btn">Search</button>
-          </div>
-        </div>
-      </div></div> */
-}
+

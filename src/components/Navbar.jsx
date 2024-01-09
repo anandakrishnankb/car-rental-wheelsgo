@@ -29,7 +29,6 @@ const Navbar = () => {
               WheelsGo
             </Title>
           </div>
-          {/* <div className="nav-links"> */}
           <div className={active}>
             <Link
               className="nav-link-icons"
@@ -44,11 +43,7 @@ const Navbar = () => {
                 Home
               </Button>
             </Link>
-            <Link
-              className="nav-link-icons"
-              to="/about"
-              duration={500}
-            >
+            <Link className="nav-link-icons" to="/about" duration={500}>
               <Button
                 style={{
                   fontSize: "25px",
@@ -59,28 +54,16 @@ const Navbar = () => {
               >
                 About
               </Button>
-
-              {/* About */}
             </Link>
-            <Link
-              className="nav-link-icons"
-              to="/models"
-              duration={500}
-            >
+            <Link className="nav-link-icons" to="/models" duration={500}>
               <Button
                 style={{ fontSize: "25px", fontWeight: "600", height: "50px" }}
                 type="text"
               >
                 Vehicle Models
               </Button>
-
-              {/* Vehicle Models */}
             </Link>
-            <Link
-              className="nav-link-icons"
-              to="/testimonial"
-              duration={500}
-            >
+            <Link className="nav-link-icons" to="/testimonial" duration={500}>
               <Button
                 style={{ fontSize: "25px", fontWeight: "600", height: "50px" }}
                 type="text"
@@ -88,16 +71,9 @@ const Navbar = () => {
                 {" "}
                 Testimonial
               </Button>
-
-              {/* Testimonial */}
             </Link>
 
-            {/* Our Team */}
-            <Link
-              className="nav-link-icons"
-              to="/contact"
-              duration={500}
-            >
+            <Link className="nav-link-icons" to="/contact" duration={500}>
               <Button
                 style={{ fontSize: "25px", fontWeight: "600", height: "50px" }}
                 type="text"
@@ -105,13 +81,7 @@ const Navbar = () => {
                 {" "}
                 Contact
               </Button>
-
-              {/* Contact */}
             </Link>
-            {/* <div className="nav-buttons">
-              <button className="signin-btn">Sign In</button>
-              <button className="red-btn">Register</button>
-            </div> */}
           </div>
           <div onClick={toggle} className={toggleIcon}>
             <div className="line1"></div>

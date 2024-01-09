@@ -1,6 +1,14 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Typography, Button, Form, Input, InputNumber, message, notification } from "antd";
+import {
+  Typography,
+  Button,
+  Form,
+  Input,
+  InputNumber,
+  message,
+  notification,
+} from "antd";
 import { MailOutlined, PhoneOutlined } from "@ant-design/icons";
 
 const { Title, Text } = Typography;
@@ -10,9 +18,7 @@ const validateMessages = {
     email: "${label} is not a valid !",
   },
 };
-// const onFinish = (values) => {
-//   console.log(values);
-// };
+
 const Footer = () => {
   const form = useRef();
   const sendEmail = (e) => {
@@ -177,9 +183,9 @@ const Footer = () => {
                 marginTop: "10px",
                 fontSize: "16px",
                 height: "40px",
-                backgroundColor: "#cb3737", // Use backgroundColor instead of background
+                backgroundColor: "#cb3737",
                 borderRadius: "3px",
-                color: "white", // Set text color
+                color: "white",
               }}
               type="primary"
               htmlType="submit"
@@ -187,47 +193,6 @@ const Footer = () => {
               Submit
             </Button>
           </form>
-          {/* <Form
-            ref={form}
-            onSubmit={sendEmail}
-            // onFinish={onFinish}
-            style={{
-              maxWidth: 600,
-            }}
-            validateMessages={validateMessages}
-          >
-            <Form.Item
-              name={["user", "email"]}
-              rules={[
-                {
-                  type: "email",
-                  required: true,
-                  message: "Please enter your email",
-                },
-              ]}
-            >
-              <Input
-                style={{ height: "40px", fontSize: "16px" }}
-                placeholder="Enter Your Email Address"
-              />
-            </Form.Item>
-            <Form.Item>
-              <Button
-                style={{
-                  marginTop: "10px",
-                  fontSize: "16px",
-                  height: "40px",
-                  backgroundColor: "#cb3737", // Use backgroundColor instead of background
-                  borderRadius: "3px",
-                  color: "white", // Set text color
-                }}
-                type="primary"
-                htmlType="submit"
-              >
-                Submit
-              </Button>
-            </Form.Item>
-          </Form> */}
         </div>
       </div>
     </section>

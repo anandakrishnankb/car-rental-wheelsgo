@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Typography, Form, Input, InputNumber, Button, message } from "antd";
+import { Typography, Form, Input, Button, message } from "antd";
 import { Link } from "react-router-dom";
 import {
   PhoneOutlined,
@@ -20,26 +20,20 @@ const validateMessages = {
   },
 };
 
-// const onFinish = (values) => {
-//   message.success("Form Submitted!")
-//   console.log(values);
-// };
 const ContactForm = () => {
   const [formValues, setFormValues] = useState({});
 
   const sentMsg = async (e) => {
     e.preventDefault();
     message.success("Message Sent");
-    console.log(formValues)
-    console.log(formValues.name)
+    console.log(formValues);
+    console.log(formValues.name);
 
     try {
-      // Send email using emailjs.send
       const templateParams = {
         user_name: formValues.name,
         user_email: formValues.email,
         user_message: formValues.introduction,
-        // Add other parameters as needed
       };
 
       const emailResult = await emailjs.send(
@@ -124,7 +118,6 @@ const ContactForm = () => {
       <div className="contact-form">
         <Form
           name="nest-messages"
-          // onFinish={onFinish}
           style={{
             maxWidth: 600,
           }}

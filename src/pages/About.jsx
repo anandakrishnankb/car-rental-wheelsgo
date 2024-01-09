@@ -43,9 +43,11 @@ const About = () => {
           <img src={AbtImg} alt="" />
         </div>
         <div className="about-text-container">
-          <Title className="title-head" level={1}>About Company</Title>
+          <Title className="title-head" level={1}>
+            About Company
+          </Title>
           <Title
-          className="title"
+            className="title"
             level={1}
             style={{
               lineHeight: "1",

@@ -10,7 +10,7 @@ const Contact = () => {
       <Navbar />
       <SectionHero name="Contact Us" />
       <ContactForm />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
